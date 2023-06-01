@@ -20,9 +20,9 @@ I have add admin data to seeder to endpoint check for CRUD operations
 
 ## Accessing API Documentation
 
--   http://{{host}}/api/v1/docs
+-   https://fsw-challenge-7-arief.up.railway.app/documentation
 
-## Firs Setup
+## First Setup
 
 1. Install Library
 
