@@ -5,7 +5,7 @@
     "license": "MIT",
     "scripts": {
         "start": "node -r dotenv/config bin/www",
-        "develop": "cross-env NODE_ENV=test nodemon -r dotenv/config bin/www",
+        "develop": "nodemon -r dotenv/config bin/www",
         "db:create:test": "cross-env NODE_ENV=test sequelize db:create",
         "pretest": "cross-env NODE_ENV=test yarn db:reset",
         "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --coverage --colors --verbose --detectOpenHandles --forceExit",
