@@ -11,8 +11,6 @@ class CarController extends ApplicationController {
     }
 
     handleListCars = async (req, res) => {
-        // const offset = this.getOffsetFromRequest(req);
-        // const limit = req.query.pageSize;
         const query = this.getListQueryFromRequest(req);
         const cars = await this.carModel.findAll(query);
         const carCount = await this.carModel.count({ where: query.where, include: query.include });
@@ -121,7 +119,6 @@ class CarController extends ApplicationController {
     };
 
     handleDeleteCar = async (req, res) => {
-        // const car = await this.carModel.destroy(req.params.id);
         await this.carModel.destroy({ where: { id: req.params.id } });
         res.status(204).end();
     };
